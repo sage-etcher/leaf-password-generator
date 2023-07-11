@@ -44,10 +44,10 @@ def get_settings (argv):
 	default_length  = "16"
 	default_count   = "1"
 	# boolean based 
-	default_upper   = "true"
-	default_lower   = "true"
-	default_numeric = "true"
-	default_special = "true"
+	default_upper   = "false"
+	default_lower   = "false"
+	default_numeric = "false"
+	default_special = "false"
 
 	# first get key value pairs
 	arguement_pairs = split_into_pairs (argv)
