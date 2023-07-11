@@ -57,14 +57,14 @@ def get_settings (argv):
 
 	# default value declarations
 	# integer based 
-	default_length  = "16"
-	default_count   = "1"
+	default_length  = "16"       # password length
+	default_count   = "1"        # how many passwords to generate
 	# boolean based 
-	default_upper   = "false"
-	default_lower   = "false"
-	default_numeric = "false"
-	default_special = "false"
-	default_bare    = "false"
+	default_upper   = "false"    # use uppercase letters
+	default_lower   = "false"    # use lowercase letters
+	default_numeric = "false"    # use numbers
+	default_special = "false"    # use special character
+	default_bare    = "false"    # print copywright notice
 
 	# first get key value pairs
 	arguement_pairs = split_into_pairs (argv)
