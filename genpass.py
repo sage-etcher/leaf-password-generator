@@ -138,7 +138,7 @@ def main (argv):
 	pass_length, pass_count, upper, lower, numeric, special, bare = get_settings (argv)
 
 	# if bare mode is active, dont print this
-	if not bare:
+	if not bare == 'true':
 		# print licence information
 		print_file_contents ("./LICENSE_INTERACTIVE_MODE")	
 	
