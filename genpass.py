@@ -157,19 +157,22 @@ def main (argv):
 
 	# print licencsing information and exit if needed
 	if not licensing_stuff (bare, argv):
-		return
+		sys.exit (1)       # exit the program with error 
 
 	# next, generate the string of character we want in the password
 	alphabet = generate_alphabet_string (upper, lower, numeric, special)
 	# if alphabet is empty string, exit without trying to generate anything 	
 	if (alphabet == ""):
-		return	
+		sys.exit (1)       # exit the program with error
 
 	# generate "pass_count" num of passwords
 	passwords = [generate (int (pass_length), alphabet) for _i in range (int (pass_count))]
 
 	# print passwords '\n' terminated to terminal
 	print_result (passwords)
+	
+	# exit the program with no error 
+	sys.exit (0)
 
 
 # run main function
