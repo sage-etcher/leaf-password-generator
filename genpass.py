@@ -74,7 +74,7 @@ def get_settings (argv):
 	count   = get_value_int  (arguement_pairs, "count",   default_count)
 	upper   = get_value_bool (arguement_pairs, "upper",   default_upper)
 	lower   = get_value_bool (arguement_pairs, "lower",   default_lower)
-	numeric = get_value_bool (arguement_pairs, "numeric",     default_numeric)
+	numeric = get_value_bool (arguement_pairs, "numeric", default_numeric)
 	special = get_value_bool (arguement_pairs, "special", default_special)
 
 	# return settings 	
