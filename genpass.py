@@ -130,13 +130,8 @@ def print_file_contents (filename):
 	print (file_contents)
 
 
-# prints warranty information  "show w"
-
-# main execution line, take console arguements 
-def main (argv):
-	# first get commandline arguements from "get_settings"
-	pass_length, pass_count, upper, lower, numeric, special, bare = get_settings (argv)
-
+# licensing stuff return true means continue, False mean quit
+def licensing_stuff (bare, argv):
 	# if bare mode is active, dont print this
 	if not bare == 'true':
 		# print licence information
@@ -145,10 +140,23 @@ def main (argv):
 	# if user sends show command find what they want to see	
 	if argv[:6] == "show w":
 		print_file_contents ("./LICENSE_WARRANTY")
-		return
+		return False      # stop running
 	# redistriburion information
 	if argv[:6] == "show c":
 		print_file_contents ("./LICENSE")
+		return False      # stop running
+
+	# continue running
+	return True
+
+
+# main execution line, take console arguements 
+def main (argv):
+	# first get commandline arguements from "get_settings"
+	pass_length, pass_count, upper, lower, numeric, special, bare = get_settings (argv)
+
+	# print licencsing information and exit if needed
+	if not licensing_stuff (bare, argv):
 		return
 
 	# next, generate the string of character we want in the password
