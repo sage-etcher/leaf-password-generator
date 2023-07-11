@@ -30,8 +30,8 @@ def get_settings (argv):
 		# regex script
 		rgx_get_pairs = re.compile (r"([a-zA-Z]+)=([a-zA-Z0-9]+)")
 		# hashtable of arguements keyvaluepairs
-		# check for matches in argv, if any are found loop throught them, "... for m in (rgx_get_pairs.match (arguement) ... ) if m"
-		# for each match add a keyValuePair, "m.group (1): m.group (2) ..."
+		# find all matches in argv, "... for m in (re.findall (rgx_get_pairs, argv)) if m" 
+		# add them to a hashtable <name m[0]>:<value m[1]>, "m[0]: m[1] ... "
 		hashtable = {m[0]: m[1] for m in (re.findall (rgx_get_pairs, argv)) if m}
 		
 		return hashtable 
