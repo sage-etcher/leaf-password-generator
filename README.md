@@ -23,7 +23,7 @@ python genpass.py [show [w|c]|arguements]
 ### Usage Example
 If I wanted to generate 5 passwords, each password 20 characters long, containing just numbers and lowercase letters, I'd run 
 ```
-python genpass.py count=5 length=20 numeric=true lower=true
+python genpass.py bare=true count=5 length=20 numeric=true lower=true
 ```
 
 and the program would return something allong the lines of 
