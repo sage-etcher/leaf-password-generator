@@ -7,8 +7,8 @@ python genpass.py [show [w|c]|arguements]
 ```
 
 ### Arguements 
-| Arguement        | Default Value | Description | 
-|:---------------- |:------------- |:----------- |
+| Arguement | Default Value | Description | 
+|:-----------------|:------|:----------- |
 | `show w` | *N/A* | prints warranty information, cannot be used with other arguements |
 | `show c` | *N/A* | prints terms and condition for the license, cannot be used with other arguements |
 | `length=[int]` | 16 | password length. |
