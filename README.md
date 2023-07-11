@@ -1,7 +1,7 @@
-# password-generator
+# Leaf Password Generator
 Just a quick simple password generator, for personal use
 
-## Using the password-generator
+## Using the password generator
 ```
 python genpass.py [show [w|c]|arguements]
 ```
