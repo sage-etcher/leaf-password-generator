@@ -1,5 +1,5 @@
 # Leaf Password Generator
-Just a quick simple password generator, for personal use
+A secure password generator written in python. Generates N number of passwords each having N number of characters, command-line/terminal based.
 
 ## Using the password generator
 ```
